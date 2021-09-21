@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anton Podobed Task-2</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <main>
+        <form action="" class="form">
+          <h1 class="form__title">Online Event Registration Form</h1>
+          <br>
+          <p class="form__text">If you would like to take part in our event, please fill in yuor details in the Event
+            Registration Form below and you will be automatically registered. Event registration must be completed at
+            least six (6) days prior to the event.</p>
+          <br>
+          <div class="form__info">
+            <table>
+              <tbody>
+                <tr class="form__info-name-block-title">
+                  <td><label class="form__info-nameTitle"><b>Name*</b></label></td>
+                </tr>
+                
+                <tr class="form__info-name-block-input">
+                  <td><input type="text" class="form__info-firstName" required placeholder="First"></td>
+                  <td><input type="text" class="form__info-lastName" required placeholder="Last"></td>
+                </tr>
+                <tr class="form__info-contact-block-title">
+                  <td><label class="form__info-contact-title" required><b>Email*</b></label></td>
+                  <td><label class="form__info-phone-title" required><b>Phone*</b></label></td>
+                </tr>
+                <tr class="form__info-contact-block-input">
+                  <td><input type="email" class="form__info-email"></td>
+                  <td><input type="text" class="form__info-phone" placeholder="### ### ####"></td>
+                </tr>
+                <tr class="form__info-questions-block-title">
+                  <td><label class="form__info-friends-title"><b>How many friends will you bring along?*</b></label>
+                  </td>
+                  <td><label class="form__info-arrive-title"><b>When will you arrive?*</b></label></td>
+                </tr>
+                <tr class="form__info-questions-block-input">
+                  <td>
+                    <select class="form__info-friends" required="required">
+                      <option>None</option>
+                    </select>
+                  </td>
+                  <td><input type="time" class="form__info-arrive" required></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <div class="form__radio">
+            <p class="form__radio-title"><b>How did you hear about the event?*</b></p>
+            <p><label class="form__radio-item"><input type="radio">Friends or colleague</label></p>
+            <p><label class="form__radio-item"><input type="radio">Advertisement</label></p>
+            <p><label class="form__radio-item"><input type="radio">TV</label></p>
+            <p><label class="form__radio-item"><input type="radio">Search Engine</label></p>
+          </div>
+          <br>
+          <p class="form__position-text">Below, you can find a map of the event venue. Please contact us for any
+            further details or use the coordinate on your GPS. See you there!</p>
+          <img src="map.png" alt="map" class="form__position-map">
+          <br>
+          <br>
+          <div class="form__coordinates-block">
+            <label class="form__coordinates-title">Coordinate
+              <br>
+              <input type="text" class="form__coordinates-input">
+            </label>
+          </div>
+          <br>
+          <button type="submit" class="form__button">REGISTER</button>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>
