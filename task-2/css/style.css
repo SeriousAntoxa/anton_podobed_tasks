@@ -235,3 +235,107 @@ html, body {
    font-size: 23px;
    line-height: 33px;
 }
+
+@media (max-width: 559.98px) {
+   .main {
+      padding: 25px;
+   }
+   .form__title {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+   }
+   .form__text {
+      margin-top: 35px;
+      font-size: 0.8rem;
+      line-height: 1rem;
+   }
+   .form__info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+   }
+   .form__info-block {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 35px;
+   }
+   .form__info-block:last-child {
+      margin-bottom: 0;
+   }
+   .form__info-left-block {
+      width: 100%;
+   }
+   .form__info-right-block {
+      margin: 20px 0 0;
+      width: 100%;
+   }
+   .form__info-item {
+      font-size: 0.9rem;
+      line-height: 1.1rem;
+   }
+   .form__info-item input, select {
+      margin-top: 10px;
+      padding: 10px;
+      height: 46px;
+      font-size: 0.8rem;
+      line-height: 0.8rem;
+   }
+   .form__radio {
+      margin-top: 40px;
+   }
+   .form__radio-block-item {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+   }
+   .form__radio-title {
+      font-size: 0.9rem;
+      line-height: 1.1rem;
+   }
+   .form__radio-item {
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+      line-height: 1.1rem;
+   }
+   .form__radio-block-item input {
+      appearance: none;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #000000;
+      outline: none;
+      margin-right: 10px;
+      position: relative;
+      top: 3px;
+   }
+   .form__radio-block-item input:checked {
+      border: 10px solid #0000ff;
+   }
+   .form__position-text {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      line-height: 1rem;
+   }
+   .form__position-map {
+      margin-top: 15px;
+      width: 100%;
+   }
+   .form__coordinates-block {
+      margin-top: 20px;
+   }
+   .form__coordinates-title {
+      font-size: 0.9rem;
+      line-height: 1.1rem;
+   }
+   .form__coordinates-input {
+      margin-top: 9px;
+      height: 46px;
+   }
+   .button {
+      margin-top: 20px;
+      padding: 10px 0;
+      width: 160px;
+      font-size: 0.9rem;
+      line-height: 1.1rem;
+   }
+}
