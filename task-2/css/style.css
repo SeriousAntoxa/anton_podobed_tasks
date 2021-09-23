@@ -95,7 +95,12 @@ html, body {
 }
 
 .form {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
    flex-direction: column;
 }
 
@@ -115,13 +120,20 @@ html, body {
 }
 
 .form__info {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
    margin-top: 65px;
 }
 
 .form__info-block {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -webkit-box-align: end;
+   -ms-flex-align: end;
    align-items: flex-end;
    margin-bottom: 43px;
    width: 100%;
@@ -161,7 +173,12 @@ html, body {
 }
 
 .form__radio-block-item {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
    flex-direction: column;
    margin-top: 24px;
 }
@@ -178,6 +195,8 @@ html, body {
 }
 
 .form__radio-block-item input {
+   -webkit-appearance: none;
+   -moz-appearance: none;
    appearance: none;
    border-radius: 50%;
    width: 25px;
@@ -250,17 +269,18 @@ html, body {
       line-height: 1rem;
    }
    .form__info {
-      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       margin-top: 40px;
    }
    .form__info-block {
-      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       margin-bottom: 35px;
-   }
-   .form__info-block:last-child {
-      margin-bottom: 0;
    }
    .form__info-left-block {
       width: 100%;
@@ -274,7 +294,6 @@ html, body {
       line-height: 1.1rem;
    }
    .form__info-item input, select {
-      margin-top: 10px;
       padding: 10px;
       height: 46px;
       font-size: 0.8rem;
@@ -284,8 +303,6 @@ html, body {
       margin-top: 40px;
    }
    .form__radio-block-item {
-      display: flex;
-      flex-direction: column;
       margin-top: 15px;
    }
    .form__radio-title {
@@ -298,14 +315,9 @@ html, body {
       line-height: 1.1rem;
    }
    .form__radio-block-item input {
-      appearance: none;
-      border-radius: 50%;
       width: 20px;
       height: 20px;
-      border: 2px solid #000000;
-      outline: none;
       margin-right: 10px;
-      position: relative;
       top: 3px;
    }
    .form__radio-block-item input:checked {
