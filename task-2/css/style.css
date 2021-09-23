@@ -228,8 +228,10 @@ html, body {
 .button {
    margin-top: 30px;
    padding: 20px 0;
-   border-radius: 4px;
    width: 234px;
+   border-radius: 4px;
+   background-color: #333333;
+   color: #ffffff;
    font-size: 23px;
    line-height: 33px;
 }
