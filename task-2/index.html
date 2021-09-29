@@ -5,76 +5,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anton Podobed Task-2</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <div class="content">
-      <main>
+    <div class="container">
+      <main class="main">
         <form action="" class="form">
           <h1 class="form__title">Online Event Registration Form</h1>
-          <br>
-          <p class="form__text">If you would like to take part in our event, please fill in yuor details in the Event
+          <p class="form__text">If you would like to take part in our event, please fill in your details in the Event
             Registration Form below and you will be automatically registered. Event registration must be completed at
             least six (6) days prior to the event.</p>
-          <br>
           <div class="form__info">
-            <table>
-              <tbody>
-                <tr class="form__info-name-block-title">
-                  <td><label class="form__info-nameTitle"><b>Name*</b></label></td>
-                </tr>
-                
-                <tr class="form__info-name-block-input">
-                  <td><input type="text" class="form__info-firstName" required placeholder="First"></td>
-                  <td><input type="text" class="form__info-lastName" required placeholder="Last"></td>
-                </tr>
-                <tr class="form__info-contact-block-title">
-                  <td><label class="form__info-contact-title" required><b>Email*</b></label></td>
-                  <td><label class="form__info-phone-title" required><b>Phone*</b></label></td>
-                </tr>
-                <tr class="form__info-contact-block-input">
-                  <td><input type="email" class="form__info-email"></td>
-                  <td><input type="text" class="form__info-phone" placeholder="### ### ####"></td>
-                </tr>
-                <tr class="form__info-questions-block-title">
-                  <td><label class="form__info-friends-title"><b>How many friends will you bring along?*</b></label>
-                  </td>
-                  <td><label class="form__info-arrive-title"><b>When will you arrive?*</b></label></td>
-                </tr>
-                <tr class="form__info-questions-block-input">
-                  <td>
-                    <select class="form__info-friends" required="required">
-                      <option>None</option>
-                    </select>
-                  </td>
-                  <td><input type="time" class="form__info-arrive" required></td>
-                </tr>
-              </tbody>
-            </table>
-
+            <div class="form__info-name-block form__info-block">
+              <div class="form__info-left-block form__info-item">
+                <div><label class="form__info-nameTitle">Name<span class="title--done">*</span></label></div>
+                <div><input type="text" class="form__info-firstName" required placeholder="First"></div>
+              </div>
+              <div class="form__info-right-block form__info-item">
+                <div><input type="text" class="form__info-lastName" required placeholder="Last"></div>
+              </div>
+            </div>
+            <div class="form__info-contact-block form__info-block">
+              <div class="form__info-left-block form__info-item">
+                <div><label class="form__info-contact-title" required>Email<span class="title--done">*</span></label>
+                </div>
+                <div><input type="email" class="form__info-email"></div>
+              </div>
+              <div class="form__info-right-block form__info-item">
+                <div><label class="form__info-phone-title" required>Phone<span class="title--done">*</span></label>
+                </div>
+                <div><input type="text" class="form__info-phone" placeholder="### ### ####"></div>
+              </div>
+            </div>
+            <div class="form__info-questions-block form__info-block">
+              <div class="form__info-left-block form__info-item">
+                <div><label class="form__info-friends-title">How many friends will you bring along?<span
+                      class="title--done">*</span></label>
+                </div>
+                <div>
+                  <select class="form__info-friends" required="required">
+                    <option>None</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__info-right-block form__info-item">
+                <div><label class="form__info-arrive-title">When will you arrive?<span
+                      class="title--done">*</span></label></div>
+                <div><input type="time" class="form__info-arrive" required placeholder="HH:MM AM"></div>
+              </div>
+            </div>
           </div>
           <div class="form__radio">
-            <p class="form__radio-title"><b>How did you hear about the event?*</b></p>
-            <p><label class="form__radio-item"><input type="radio">Friends or colleague</label></p>
-            <p><label class="form__radio-item"><input type="radio">Advertisement</label></p>
-            <p><label class="form__radio-item"><input type="radio">TV</label></p>
-            <p><label class="form__radio-item"><input type="radio">Search Engine</label></p>
+            <p class="form__radio-title">How did you hear about the event?<span class="title--done">*</span></p>
+            <div class="form__radio-block-item">
+              <label for="radio-1" class="form__radio-item"><input type="radio" id="radio-1">Friend or
+                colleague</label>
+              <label for="radio-2" class="form__radio-item"><input type="radio" id="radio-2">Advertisement</label>
+              <label for="radio-3" class="form__radio-item"><input type="radio" id="radio-3">TV</label>
+              <label for="radio-4" class="form__radio-item"><input type="radio" id="radio-4">Search Engine</label>
+            </div>
           </div>
-          <br>
           <p class="form__position-text">Below, you can find a map of the event venue. Please contact us for any
-            further details or use the coordinate on your GPS. See you there!</p>
-          <img src="map.png" alt="map" class="form__position-map">
-          <br>
-          <br>
+            further details or use the coordinates on your GPS. See you there!</p>
+          <img src="img/map.png" alt="map" class="form__position-map">
           <div class="form__coordinates-block">
-            <label class="form__coordinates-title">Coordinate
-              <br>
+            <label class="form__coordinates-title">Coordinates
               <input type="text" class="form__coordinates-input">
             </label>
           </div>
-          <br>
-          <button type="submit" class="form__button">REGISTER</button>
+          <div class="form__button">
+            <button type="submit" class="button">REGISTER</button>
+          </div>
         </form>
       </main>
     </div>
