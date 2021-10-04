@@ -140,6 +140,7 @@
     margin-top: 170px;
   }
 }
+
 @media (max-width: 600px) {
   .footer {
     height: initial;
