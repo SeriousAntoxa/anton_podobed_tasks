@@ -1,0 +1,117 @@
+.gallery {
+  background-color: #fafafa;
+  padding: 109px 0;
+}
+
+.gallery__text {
+  margin-top: 25px;
+  width: 45%;
+  line-height: 21px;
+}
+
+.gallery__images {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gallery__image {
+  width: 32.9%;
+  margin: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery__image img {
+  width: 100%;
+}
+
+.gallery__images .gallery__image:first-child {
+  width: 66.1%;
+}
+
+.gallery__image-desc {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0 20px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: top 0.2s ease-out 0s;
+  color: #ffffff;
+}
+
+.gallery__image-desc-title {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.gallery__image:hover .gallery__image-desc {
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    background-color: #fafafa;
+    padding: 109px 0 0px;
+  }
+  .gallery__images {
+    margin: 56px 0 42px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 790px;
+  }
+  .gallery__image {
+    width: 49.7%;
+    flex: 1 1 inherit;
+    margin-bottom: 25px;
+  }
+  .gallery__images .gallery__image:first-child {
+    width: 49.7%;
+    margin-bottom: 10px;
+  }
+  .gallery__images .gallery__image:nth-child(2) {
+    order: 1;
+  }
+  .gallery__images .gallery__image:nth-child(4) {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery__text {
+    margin-top: 25px;
+    width: 100%;
+  }
+  .gallery__images {
+    margin: 56px 0 105px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: initial;
+  }
+  .gallery__image {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 3px;
+  }
+  .gallery__images .gallery__image:first-child {
+    width: 100%;
+    margin-bottom: 3px;
+  }
+  .gallery__images .gallery__image:nth-child(2) {
+    order: 0;
+  }
+  .gallery__images .gallery__image:nth-child(4) {
+    order: 0;
+  }
+}
