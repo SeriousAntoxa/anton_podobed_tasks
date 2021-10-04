@@ -1,0 +1,39 @@
+.companies {
+  background-color: #fafafa;
+  height: 267px;
+}
+
+.companies__content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.companies__content img {
+  height: 72px;
+}
+
+@media (max-width: 768px) {
+  .companies {
+    height: 272px;
+  }
+  .companies .content {
+    padding: 0px 7px 0px 39px;
+  }
+  .companies__content img {
+    margin-left: 60px;
+  }
+  .companies__content img:first-child {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .companies__content img {
+    margin-left: 80px;
+  }
+  .companies__content img:first-child {
+    margin-left: 54px;
+  }
+}

@@ -1,0 +1,147 @@
+.main__hi {
+  width: 100%;
+  height: 805px;
+  color: #ffffff;
+  position: relative;
+}
+
+.main__hi > input {
+  display: none;
+}
+
+
+.main__hi-info {
+  padding-top: 319px;
+  height: inherit;
+  position: relative;
+}
+
+.main__hi-text {
+  width: 40%;
+  margin-top: 46px;
+}
+
+.main__hi-button {
+  margin-top: 40px;
+  width: 115px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  color: #a3a3a3;
+  background-color: transparent;
+}
+
+.main__hi-button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  transition: all 1s ease 0s;
+}
+
+.slider__control-dots {
+  margin-left: 215px;
+  position: absolute;
+  bottom: 36px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1;
+
+}
+
+.slider__control-dot {
+  width: 10px;
+  height: 10px;
+  margin-right: 3px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+
+#slide1:checked ~ .slider__control-dots label:nth-of-type(1),
+#slide2:checked ~ .slider__control-dots label:nth-of-type(2) {
+  width: 13px;
+  height: 13px;
+  background-color: #ffffff;
+}
+
+.slider__control-dot:hover {
+  width: 13px;
+  height: 13px;
+  background-color: #ffffff;
+  transition: all 0.5s ease 0s;
+}
+
+.main__slider1 {
+  background: url("../images/1920x1080/01.jpg") center / cover no-repeat;
+  position: absolute;
+  height: inherit;
+  left: 0;
+  width: 100%;
+  transition: left 1s linear 0s;
+  z-index: 0;
+}
+
+.main__slider2 {
+  background: url("../images/1920x1080/02.jpg") center / cover no-repeat;
+  left: 100%;
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  transition: left 1s linear 0s;
+  z-index: 0;
+}
+
+#slide1:checked ~ .main__slider1 {
+  left: 0;
+  transition: left 1s linear 0s;
+}
+#slide1:checked ~ .main__slider2 {
+  left: 100%;
+  transition: left 1s linear 0s;
+}
+#slide2:checked ~ .main__slider1 {
+  left: -100%;
+  transition: left 1s linear 0s;
+}
+#slide2:checked ~ .main__slider2 {
+  left: 0;
+  transition: left 1s linear 0s;
+}
+
+
+
+@media (max-width: 768px) {
+  .main__hi {
+    height: 1024px;
+  }
+  .main__hi-info {
+    padding-top: 405px;
+  }
+  .main__hi-text {
+    width: 65%;
+    margin-top: 15px;
+    line-height: 21px;
+  }
+  .slider__control-dots {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main__hi {
+    height: 667px;
+  }
+  .main__hi-info {
+    padding-top: 184px;
+  }
+  .main__hi-text {
+    margin-top: 14px;
+    width: 100%;
+  }
+  .slider__control-dots {
+    margin-left: 15px;
+    bottom: 25px;
+  }
+}
