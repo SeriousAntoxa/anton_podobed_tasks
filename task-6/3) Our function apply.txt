@@ -1,0 +1,29 @@
+3) Напишите свой полифил на фуницию apply
+
+
+solution:
+
+const song = {
+  firstWord: '',
+  lastWord: '',
+  newSong() {
+    return `${this.lastWord}${this.firstWord}${this.lastWord}`
+  }
+}
+
+function getNewSong(firstWord, lastWord) {
+  this.firstWord = firstWord
+  this.lastWord = lastWord
+  return this.newSong()
+}
+
+// this our function apply
+function apply(fn, arr, args) {
+  const nameNewFn = Date.now().toString()
+  arr[nameNewFn] = fn;
+  const result = arr[nameNewFn](...args);
+  delete arr[nameNewFn];
+  return result;
+}
+
+apply(getNewSong, song, ['Apple','Pen'])
