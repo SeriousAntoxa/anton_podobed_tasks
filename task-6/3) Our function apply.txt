@@ -18,11 +18,11 @@ function getNewSong(firstWord, lastWord) {
 }
 
 // this our function apply
-function apply(fn, arr, args) {
+function apply(fn, obj, args) {
   const nameNewFn = Date.now().toString()
-  arr[nameNewFn] = fn;
-  const result = arr[nameNewFn](...args);
-  delete arr[nameNewFn];
+  obj[nameNewFn] = fn;
+  const result = obj[nameNewFn](...args);
+  delete obj[nameNewFn];
   return result;
 }
 
