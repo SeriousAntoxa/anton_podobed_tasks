@@ -1,0 +1,44 @@
+3) Bracket Duplicates
+Desc: Create a program that will take in a string as input and, 
+if there are duplicates of more than two alphabetical characters in the string, 
+returns the string with all the extra characters in a bracket.
+Note: ensure that the input is a string, and return "Please enter a valid string" if it is not.
+Given: "aaaabbcdefffffffg" 
+Return: "aa[aa]bbcdeff[fffff]g" 
+
+Example
+Test.assertEquals(stringParse("aaaabbcdefffffffg"), "aa[aa]bbcdeff[fffff]g")
+Test.assertEquals(stringParse("boopdedoop"), "boopdedoop")
+Test.assertEquals(stringParse("helloookat"), "helloo[o]kat")
+
+
+solution: 
+let stringParse = (string) => {
+  if (typeof string !== "string") {
+    return "Please enter a valid string";
+  }
+  let count = 0;
+  let result = [];
+  let arr = string.split("");
+  let bracketArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[i + 1] && arr[i] !== arr.length - 1) {
+      if (count <= 1) {
+        result.push(arr[i]);
+        count++;
+      } else {
+        bracketArr.push(arr[i]);
+      }
+    } else if (arr[i] === arr[i - 1] && count > 1) {
+      bracketArr.push(arr[i]);
+      result.push(`[${bracketArr.join("")}]`);
+      bracketArr = [];
+      count = 0;
+    } else {
+      result.push(arr[i]);
+      bracketArr = [];
+      count = 0;
+    }
+  }
+  return result.join("");
+}

@@ -1,0 +1,8 @@
+1) Calculate string length
+Desc: Your task is to calculate the length of each word and return the array like below.
+Note: ignore anything but string.
+Given: “hello worldd” 
+Return: [“hello 5”, “worldd 6”];
+
+solution:
+let itemLength = (str) => str.split(' ').map((item) => item = `${item} ${item.length}`)
