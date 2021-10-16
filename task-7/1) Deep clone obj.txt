@@ -1,0 +1,19 @@
+1) Написать свой дип копи, который будет копировать все совства-примитивы в новый обьект, а также вложенные обьекты (кроме функций и массивов)
+Нельзя использовать JSON.parse(JSON.stringify(obj))
+
+
+solution:
+
+let deepClone = (obj) => {
+  let cloneObj = {};
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      cloneObj[key] =
+        typeof obj[key] !== "object" ? obj[key] : deepClone(obj[key]);
+      if (typeof obj[key] === "function") {
+        delete cloneObj[key];
+      }
+    }
+  }
+  return cloneObj;
+};
