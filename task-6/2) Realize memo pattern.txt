@@ -11,7 +11,7 @@ let memo = (fn) => {
   let cache = {};
   return (...res) => {
     if (res in cache) cache[res]
-    return (cache[res] = fn(res[0], res[1]));
+    return (cache[res] = fn(...res));
   };
 };
 
