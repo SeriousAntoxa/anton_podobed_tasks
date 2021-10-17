@@ -1,0 +1,22 @@
+2) Realize memo pattern
+const sum = (a,b) => a + b;
+const memedSum = memo(sum);
+
+console.log(memedSum(1,2));
+console.log(memedSum(1,2)); // second time there is no calculation, we get answer from cache
+
+
+solution:
+let memo = (fn) => {
+  let cache = {};
+  return (...res) => {
+    if (res in cache) cache[res]
+    return (cache[res] = fn(...res));
+  };
+};
+
+let sum = (a, b) => a + b;
+let memedSum = memo(sum);
+
+memedSum(1, 2)
+memedSum(1, 2) //no calculation, we get answer from cache
