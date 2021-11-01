@@ -1,0 +1,80 @@
+
+.calendar__config-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.fa-cog_rotate-down {
+  transition: 0.7s ease-in-out 0s;
+  transform: rotate(120deg);
+}
+
+.fa-cog_rotate-up {
+  transition: 0.7s ease-in-out 0s;
+  transform: rotate(-120deg);
+}
+
+.calendar__config-menu {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  transition: 0.4s ease-out 0.1s;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.calendar__config-menu_vis {
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.97);
+  transition: 0.4s ease-out 0.1s;
+}
+
+.calendar__config-settings {
+  width: 100%;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+.config-form__radio, .config-form__checkbox {
+  margin: 5px 0 0 15px;
+}
+
+.config-form__radio>label, .config-form__radio>input, .config-form__checkbox>label, .config-form__checkbox>input {
+  cursor: pointer;
+}
+
+.config-form__row {
+  padding-bottom: 15px;
+}
+
+.config-form__button_center {
+  display: flex;
+  justify-content: center;
+}
+
+.config-form__button {
+  width: 80px;
+  height: 40px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  background-color: rgb(0, 120, 300);
+  border-radius: 5px;
+  transition: 0.2s ease-out 0s;
+}
+
+.config-form__button:hover {
+  width: 84px;
+  height: 44px;
+  font-size: 24px;
+  background-color: rgb(0, 0, 270);
+  transition: 0.2s ease-out 0s;
+}

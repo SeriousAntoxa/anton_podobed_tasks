@@ -1,0 +1,53 @@
+
+html, body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.wrapper {
+  overflow-x: hidden;
+  max-width: 1586px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0px auto;
+  padding: 0 15px;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 46px;
+  font-weight: 700;
+}
+
+.main {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 50px 50px;
+  z-index: 3;
+  overflow: hidden;
+}
+
+i {
+  cursor: pointer;
+}
+
+.other {
+  width: 600px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
