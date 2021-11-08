@@ -1,0 +1,48 @@
+.weather {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.weather__week {
+  min-width: 100%;
+}
+
+.weather__week-days {
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 15px 10px;
+  margin-top: 5px;
+}
+
+.weather__title {
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+.weather__week-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .weather {
+    margin-top: 30px;
+  }
+  .weather__title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .weather__week {
+    max-width: 100%;
+  }
+}
