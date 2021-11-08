@@ -1,0 +1,66 @@
+html,
+body {
+  font-family: Arial, sans-serif;
+  @include font-param(14px, 22px, 500);
+  color: #ffffff;
+  background: url("../images/fon.jpeg") no-repeat fixed center;
+  background-size: cover;
+}
+
+.wrapper {
+  overflow-x: hidden;
+  max-width: 1586px;
+}
+
+.container {
+  max-width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+h1 {
+  @include font-param(36px, 54px, 700);
+}
+
+h2 {
+  @include font-param(30px, 46px, 700);
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 3;
+  overflow: hidden;
+}
+
+i {
+  cursor: pointer;
+}
+
+.other {
+  min-width: 60%;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: $max-width_1p) {
+  .main {
+    flex-wrap: wrap;
+  }
+  .other {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: $max-width_3p) {
+  .other {
+    padding: 10px 0px 40px;
+  }
+}
