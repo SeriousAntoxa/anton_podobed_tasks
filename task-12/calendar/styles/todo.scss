@@ -1,0 +1,149 @@
+.todo {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo__main {
+  display: flex;
+  flex-direction: column;
+
+  &_hidden {
+    display: none;
+  }
+}
+
+.todo__info {
+  @include font-param(18px, 34px, 600);
+  color: #5e5e5e;
+
+  &_hidden {
+    display: none;
+  }
+}
+
+.todo__date-select {
+  @include font-param(26px, 40px, 600);
+}
+
+.todo__form {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-input {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-textarea {
+    width: 100%;
+    height: 35px;
+    @include font-param(16px, 24px, 500);
+    padding: 5px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+    resize: none;
+  }
+
+  &-button {
+    padding: 5px;
+    @include font-param(20px, 22px, 600);
+    width: 20%;
+    height: 35px;
+  }
+
+  &-button:hover {
+    background-color: #ffffff;
+  }
+}
+
+.todo__lists {
+  height: 200px;
+  overflow: auto;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 10px 0px;
+}
+
+.todo__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+
+  &-controls {
+    display: flex;
+  }
+
+  &-description {
+    margin: 0 7px;
+    width: 100%;
+    max-height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    @include font-param(16px, 24px, 500);
+    padding: 2px;
+    resize: none;
+  }
+
+  &-description_true {
+    color: rgb(50, 255, 0);
+    text-decoration: line-through;
+  }
+
+  &-check:hover {
+    color: rgb(50, 255, 0);
+  }
+
+  &-check[data-check="true"] {
+    color: rgb(50, 255, 0);
+  }
+
+  &-task {
+    width: 90%;
+    display: flex;
+    align-items: center;
+  }
+
+  &-edit {
+    margin-right: 5px;
+  }
+
+  &-edit:hover {
+    color: rgb(255, 196, 0);
+  }
+
+  &-delete:hover {
+    color: red;
+  }
+}
+
+.todo__icon {
+  font-size: 18px;
+}
+
+@media (max-width: $max-width_1p) {
+  .todo {
+    margin-top: 20px;
+    order: -1;
+  }
+  .todo__date-select {
+    text-align: center;
+  }
+}
+
+@media (max-width: $max-width_3p) {
+  .todo {
+    padding: 0px 10px;
+  }
+}
