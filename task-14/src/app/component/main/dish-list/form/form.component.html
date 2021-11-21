@@ -1,0 +1,11 @@
+<div [ngClass]="{form: true}">
+
+  <!-- <input type="text" class='form__input' value="dish1" title="dish1 or dish2" #ourDish>
+  <button class="form__button" [ngStyle]="{'color': 'black',
+                  'margin-left': '5px'}" (click)="findDish(ourDish.value)">Search dish</button>
+-->
+
+  <input type="text" class='form__input' value="vodka" title="egg, milk..." #ourIng>
+  <button class="form__button" [ngStyle]="{'color': 'black', 'margin-left': '5px'}"
+    (click)="dishInfo(ourIng.value)">Search</button>
+</div>
