@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <link rel="stylesheet" href="dist/index.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="container">
+
+      <main class="main">
+
+        <section class="calendar">
+          <div class="calendar__config-icon">
+            <i class="fas fa-cog fa-2x"></i>
+          </div>
+          <div class="calendar__config-menu">
+            <p class="calendar__config-title">Settings</p>
+            <form name="configForm" action="" class="calendar__config-settings">
+              <div class="config-form__row">
+                <div class="config-form__item">
+                  <label class="config-form__item-title">Display days of other months?</label>
+                  <div class="config-form__radio">
+                    <input type="radio" name="radioVisOtherDays" id="radioVisOtherDays_1" value="yes"
+                      class="radioVisOtherDays">
+                    <label for="radioVisOtherDays_1">Yes</label>
+                  </div>
+                  <div class="config-form__radio">
+                    <input type="radio" name="radioVisOtherDays" id="radioVisOtherDays_2" value="no"
+                      class="radioVisOtherDays">
+                    <label for="radioVisOtherDays_2">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="config-form__row">
+                <div class="config-form__item">
+                  <label class="config-form__item-title">Show ToDo?</label>
+                  <div class="config-form__radio">
+                    <input type="radio" name="radioToDo" id="radioToDo_1" value="yes" class="radioToDo">
+                    <label for="radioToDo_1">Yes</label>
+                  </div>
+                  <div class="config-form__radio">
+                    <input type="radio" name="radioToDo" id="radioToDo_2" value="no" class="radioToDo">
+                    <label for="radioToDo_2">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="config-form__row">
+                <div class="config-form__item">
+                  <label class="config-form__item-title">Select the start day of the week.</label>
+                  <div class="config-form__radio">
+                    <input type="radio" name="radioFirstDay" id="radioFirstDay_1" value="Monday" class="radioFirstDay">
+                    <label for="radioFirstDay_1">Monday</label>
+                  </div>
+                  <div class="config-form__radio">
+                    <input type="radio" name="radioFirstDay" id="radioFirstDay_2" value="Sunday" class="radioFirstDay">
+                    <label for="radioFirstDay_2">Sunday</label>
+                  </div>
+                </div>
+              </div>
+              <div class="config-form__row">
+                <div class="config-form__item">
+                  <label class="config-form__item-title">Select weekend days of the week.</label>
+                  <div class="config-form__checkbox">
+                    <input type="checkbox" name="checkboxWeekends" id="checkboxWeekends_1" value="MON"
+                      class="checkboxWeekends">
+                    <label for="checkboxWeekends_1">Monday</label>
+                  </div>
+                  <div class="config-form__checkbox">
+                    <input type="checkbox" name="checkboxWeekends" id="checkboxWeekends_2" value="TUE"
+                      class="checkboxWeekends">
+                    <label for="checkboxWeekends_2">Tuesday</label>
+                  </div>
+                  <div class="config-form__checkbox">
+                    <input type="checkbox" name="checkboxWeekends" id="checkboxWeekends_3" value="WED"
+                      class="checkboxWeekends">
+                    <label for="checkboxWeekends_3">Wednesday</label>
+                  </div>
+                  <div class="config-form__checkbox">
+                    <input type="checkbox" name="checkboxWeekends" id="checkboxWeekends_4" value="THU"
+                      class="checkboxWeekends">
+                    <label for="checkboxWeekends_4">Thursday</label>
+                  </div>
+                  <div class="config-form__checkbox">
+                    <input type="checkbox" name="checkboxWeekends" id="checkboxWeekends_5" value="FRI"
+                      class="checkboxWeekends">
+                    <label for="checkboxWeekends_5">Friday</label>
+                  </div>
+                  <div class="config-form__checkbox">
+                    <input type="checkbox" name="checkboxWeekends" id="checkboxWeekends_6" value="SAT"
+                      class="checkboxWeekends">
+                    <label for="checkboxWeekends_6">Saturday</label>
+                  </div>
+                  <div class="config-form__checkbox">
+                    <input type="checkbox" name="checkboxWeekends" id="checkboxWeekends_7" value="SUN"
+                      class="checkboxWeekends">
+                    <label for="checkboxWeekends_7">Sunday</label>
+                  </div>
+                </div>
+              </div>
+              <div class="config-form__row config-form__button_center">
+                <button class="config-form__button" type="submit">SET</button>
+              </div>
+            </form>
+          </div>
+
+          <h1 class="calendar__title">Calendar</h1>
+          <aside class="calendar__date">
+            <div class="calendar__date-year">
+              <i id='prev-year' class="fas fa-angle-left fa-3x"></i>
+              <span id='calendar__now-date-year'></span>
+              <i id='next-year' class="fas fa-angle-right fa-3x"></i>
+            </div>
+            <div class="calendar__date-month">
+              <i id='prev-month' class="fas fa-angle-left fa-3x"></i>
+              <span id='calendar__now-date-month'></span>
+              <i id='next-month' class="fas fa-angle-right fa-3x"></i>
+            </div>
+            <div class="calendar__date-day">
+              <span id='calendar__now-date-day'></span>
+            </div>
+          </aside>
+
+          <aside class="calendar__main">
+            <div class="calendar__week-days">
+              <span class="calendar__week-day"></span>
+              <span class="calendar__week-day"></span>
+              <span class="calendar__week-day"></span>
+              <span class="calendar__week-day"></span>
+              <span class="calendar__week-day"></span>
+              <span class="calendar__week-day"></span>
+              <span class="calendar__week-day"></span>
+            </div>
+            <div class="calendar__numbers">
+              <div class="calendar__week">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="calendar__week">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="calendar__week">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="calendar__week">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="calendar__week">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="calendar__week">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </aside>
+
+        </section>
+
+
+        <section class="other">
+
+          <aside class="weather">
+            <p class="weather__title">Weather</p>
+            <div class="weather__week">
+              <div class="weather__week-block">
+                <div class="weather__week-block-items">
+
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <aside class="todo">
+            <p class="todo__info todo__info_hidden">The ToDo is disabled, you can enable it in the settings</p>
+            <div class="todo__main">
+              <p class="todo__date-select"></p>
+              <form class="todo__form">
+                <div class="todo__form-column">
+                  <div class="todo__form-input">
+                    <textarea id="todoTextarea" class="todo__form-textarea" placeholder="New task"
+                      maxlength="80"></textarea>
+                  </div>
+                  <button class="todo__form-button">Add</button>
+                </div>
+                <ul class="todo__lists">
+
+                </ul>
+              </form>
+            </div>
+          </aside>
+
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <script src='dist/configFile.js'></script>
+  <script src='dist/todoFile.js'></script>
+  <script src='dist/index.js'></script>
+
+</body>
+
+</html>
