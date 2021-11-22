@@ -1,0 +1,19 @@
+<div class="dish__list">
+  <div class="dish__form">
+    <app-form class="formMain" (selectIng)="infoIng($event)" [title]="title">
+    </app-form>
+  </div>
+  <div class="dish__cards">
+    <ng-container *ngIf="selected">
+      <div class="dish__card" *ngFor="let itemDish of dishesArr">
+        <app-dish [dish]='itemDish'></app-dish>
+      </div>
+    </ng-container>
+  <!--  <ng-container *ngIf="!selected">
+      <div class="dish__card">
+        <app-dish [dish]='dishData'></app-dish>
+      </div>
+    </ng-container>
+    -->
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.dish__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.dish__cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.dish__card {
+  width: 20%;
+  margin: 5px;
+}

@@ -1,0 +1,13 @@
+<div class="dish__item">
+  <h3 class="dish__title">Dish: {{dish.recipe.dishType[0]}}</h3>
+  <app-ingredients *ngTemplateOutlet='ingredientsList'>
+  </app-ingredients>
+</div>
+
+<ng-template #ingredientsList>
+  <ul class="ingredients__list">ingredients:
+    <li *ngFor='let item of dish.recipe.ingredients' class="ingredients__item" title='{{item.food}}'>
+      {{item.food}}
+    </li>
+  </ul>
+</ng-template>

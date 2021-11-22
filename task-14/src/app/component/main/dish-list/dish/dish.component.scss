@@ -1,0 +1,26 @@
+.dish__item {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  height: 200px;
+  overflow: auto;
+  background-color: rgb(64, 248, 64);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dish__title {
+  font-size: 32px;
+  line-height: 50px;
+  color: #000000;
+}
+.ingredients__list {
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+  margin-left: 10px;
+  .ingredients__item {
+    margin-left: 10px;
+  }
+}
