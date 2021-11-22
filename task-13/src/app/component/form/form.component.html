@@ -1,0 +1,14 @@
+<h3 class="title">Dish: {{ourDish}}</h3>
+  <p>ingredients: {{ing}}</p>
+  <div class='form_red'>
+    <input type="checkbox" class="" 
+      [checked]="isChecked" 
+      (click)="changeIsChecked()">
+    <input type="text" class='input_color'
+      [value]="title" 
+      [disabled]="isChecked"
+      [(ngModel)]="ourDish">
+    <button class="" 
+      [disabled]="isChecked" 
+      (click)="findDish()">Search</button>
+  </div>

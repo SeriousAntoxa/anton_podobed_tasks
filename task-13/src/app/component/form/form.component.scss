@@ -1,0 +1,36 @@
+:host {
+  border: 5px solid rgb(251, 255, 0);
+  display: block;
+  padding: 20px;
+}
+:host(.formMain) {
+  border: 5px solid rgb(251, 255, 0);
+  display: block;
+  padding: 20px;
+  background-color: palegreen;
+}
+:host-context(.form) .title {
+  margin: 5px;
+  height: 30px;
+  display: block;
+  font-size: 32px;
+  line-height: 50px;
+  color: red;
+}
+:host-context(.formMain) .title {
+  margin: 5px;
+  height: 30px;
+  display: block;
+  font-size: 32px;
+  line-height: 50px;
+  color: red;
+}
+p {
+  font-size: 20px;
+  line-height: 30px;
+  color: rgb(0, 43, 0);
+}
+
+* {
+  margin: 5px;
+}
