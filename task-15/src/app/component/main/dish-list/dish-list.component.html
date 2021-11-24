@@ -1,0 +1,15 @@
+<div class="dish__list">
+  <div class="dish__form">
+    <app-form class="formMain" (selectIng)="infoOurDishForIng($event)">
+    </app-form>
+  </div>
+  <h3>Your ingredients: {{ selectIngredients }}</h3>
+  <ng-container *ngIf="selectIngredients === ''">
+    <p>Enter your ingredients!</p>
+  </ng-container>
+  <div class="dish__cards">
+    <ng-container *ngIf="selectIngredients !== ''">
+      <app-dish-card></app-dish-card>
+    </ng-container>
+  </div>
+</div>

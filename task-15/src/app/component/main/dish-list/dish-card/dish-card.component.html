@@ -1,0 +1,14 @@
+<div class="dish__card" *ngFor="let itemDish of dishListService.dishList">
+  <div class="dish__item">
+    <img src="{{itemDish.image}}" alt='{{itemDish.name}}'>
+    <h3 class="dish__title">Dish: {{itemDish.name}}</h3>
+    <p>Dish type: {{itemDish.type}}</p>
+    <p>Meal type: {{itemDish.mealType}}</p>
+    <p>Calories: {{itemDish.calories}}</p>
+    <app-ingredients [ingredients]="itemDish.ingredients"></app-ingredients>
+  </div>
+</div>
+
+<ng-template #ingredientsList>
+
+</ng-template>
