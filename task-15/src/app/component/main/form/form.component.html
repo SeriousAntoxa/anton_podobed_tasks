@@ -1,0 +1,6 @@
+<div [ngClass]="{form: true}">
+
+  <input type="text" class='form__input' placeholder="eggs, milk, ..." value="" title="example: eggs, milk" #ourIng>
+
+  <button class="form__button" (click)="dishInfo(ourIng.value); ourIng.value = ''">Search</button>
+</div>
