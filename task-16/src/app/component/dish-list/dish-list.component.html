@@ -1,0 +1,27 @@
+<section class="dish_list">
+
+  <aside class="dish_list--form">
+    <app-form (selectIng)="infoOurDishForIng($event)">
+    </app-form>
+ 
+  </aside>
+
+  <aside class="dish_list_info">
+    <h3 class="dish_list_info--select_ing">Your ingredients: {{ selectIngredients }}</h3>
+
+    <ng-container *ngIf="selectIngredients === ''">
+      <p class="dish_list_info--message">Enter your ingredients!</p>
+    </ng-container>
+    <ng-container *ngIf="selectIngredients !== ''">
+      <div class="dish_list_info--cards">
+        <div class="dish_list_info--card" *ngFor="let dish of dishListService.dishList">
+          <app-dish-card [dish]='dish' (dishSelected)='selectedDish($event)'></app-dish-card>
+        </div>
+      </div>
+    </ng-container>
+
+
+  </aside>
+</section>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,24 @@
+.dish--item {
+  display: flex;
+  flex-direction: row;
+  background-color: #a1f343;
+  border-radius: 10px;
+  box-shadow: 2px 10px 15px #000;
+
+  &_image {
+    width: 300px;
+    height: 300px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  &_info {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    padding: 5px 10px;
+
+    &_title {
+      font-size: 1.5rem;
+      line-height: 1.5em;
+    }
+  }
+}
