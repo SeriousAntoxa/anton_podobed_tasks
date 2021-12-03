@@ -1,0 +1,18 @@
+.authorization {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+
+  &--link {
+    margin-left: 10px;
+
+    &:hover {
+      color: #1e9101;
+    }
+
+    &.active {
+      color: #1e9101;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.home {
+  padding: 10px;
+  width: 100%;
+  background-color: #a1f343;
+  border-radius: 10px;
+
+  &--block {
+    margin-bottom: 10px;
+    
+    &_info {
+      font-size: 1.2rem;
+      line-height: 1.5em;
+    }
+    &_data {
+      font-size: 1.1rem;
+      line-height: 1.5em;
+
+      &_item{
+        margin-top: 5px;
+      }
+    }
+  }
+}
