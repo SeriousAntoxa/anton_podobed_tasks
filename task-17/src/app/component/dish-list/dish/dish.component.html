@@ -1,0 +1,18 @@
+<div class="dish--item">
+  <ng-container *ngIf='selectDish !== undefined'>
+    <img class="dish--item_image" src="{{selectDish.image}}" alt='{{selectDish.name}}'>
+
+    <div class="dish--item_info">
+
+      <h3 class="dish--item_info_title">Dish: {{selectDish.name}}</h3>
+
+      <p>Dish type: {{selectDish.type}}</p>
+      <p>Meal type: {{selectDish.mealType}}</p>
+      <p>Calories: {{selectDish.calories}}</p>
+
+      <app-ingredients [ingredients]="selectDish.ingredients"></app-ingredients>
+
+    </div>
+  </ng-container>
+
+</div>

@@ -1,0 +1,42 @@
+.dish_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  &--form {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80vw;
+    padding-left: 10px;
+
+    &--select_ing {
+      font-size: 2rem;
+      line-height: 1.5em;
+    }
+    &--message {
+      font-size: 1.6rem;
+      line-height: 1.5em;
+    }
+    &--cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      margin: -10px;
+      padding-top: 10px;
+    }
+    &--card {
+      padding: 10px;
+      flex: 0 1 33.333%;
+    }
+  }
+}

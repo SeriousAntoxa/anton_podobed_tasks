@@ -1,0 +1,17 @@
+<div class="dish_card" (click)='selectItemDish()'>
+  <div class="dish_card--item">
+
+    <img class="dish_card--item_image" src="{{dish.image}}" alt='{{dish.name}}'>
+
+    <div class="dish_card--item_info">
+
+      <h3 class="dish_card--item_info_title">Dish: {{dish.name}}</h3>
+
+      <p>Dish type: {{dish.type}}</p>
+      <p>Meal type: {{dish.mealType}}</p>
+      <p>Calories: {{dish.calories}}</p>
+
+    </div>
+
+  </div>
+</div>

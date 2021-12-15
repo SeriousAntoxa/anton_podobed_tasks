@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  width: 100%;
+
+  &--title {
+    color: #1e9101;
+  }
+
+  &--nav {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav--list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &_item {
+    padding: 0 0 0 10px;
+
+    &_link {
+      &:hover {
+        color: #1e9101;
+      }
+
+      &.active {
+        color: #1e9101;
+      }
+    }
+  }
+}

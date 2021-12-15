@@ -1,0 +1,39 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  &--links {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 20vw;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #9dd3a8;
+  }
+
+  &--link {
+    font-size: 1.7rem;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: #1e9101;
+    }
+
+    &.active {
+      color: #1e9101;
+    }
+  }
+
+  &--info {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    padding: 10px;
+    width: 100%;
+    margin-left: 10px;
+    background-color: #a1f343;
+    border-radius: 10px;
+  }
+}
